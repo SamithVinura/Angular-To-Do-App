@@ -1,0 +1,10 @@
+<li [ngClass]="{editing:isEditingProps}">
+  <div class="view">
+    <input class="toggle" type="checkbox">
+    <label (dblclick)="setTodoinEditMode()">{{todoprops.text}}</label>
+    <button class="destroy"></button>
+  </div>
+  <ng-container *ngIf="isEditingProps">
+    <input class="edit"/>
+  </ng-container>
+</li>
